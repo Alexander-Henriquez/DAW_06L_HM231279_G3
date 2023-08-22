@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/calcu.js"></script>
+    <title>Calculadora</title>
+    <style>
+        table {
+            width: 300px;
+            margin: 0 auto;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="5" id="display" style="height: 50px;"></td>
+        </tr>
+        <tr>
+            <td onclick="clearEntry()">CE</td>
+            <td colspan="3" style="background-color: #ccc;">Blankspace</td>
+            <td onclick="clearAll()">C</td>
+        </tr>
+        <tr>
+            <td onclick="memoryClear()">MC</td>
+            <td stonclick="appendToDisplay(7)">7</td>
+            <td onclick="appendToDisplay(8)">8</td>
+            <td onclick="appendToDisplay(9)">9</td>
+            <td onclick="operate('/')">/</td>
+            <td onclick="operate('sqrt')">√</td>
+        </tr>
+        <tr>
+            <td onclick="memoryRecall()">MR</td>
+            <td onclick="appendToDisplay(4)">4</td>
+            <td onclick="appendToDisplay(5)">5</td>
+            <td onclick="appendToDisplay(6)">6</td>
+            <td onclick="operate('*')">*</td>
+            <td onclick="operate('%')">%</td>
+        </tr>
+        <tr>
+            <td onclick="memoryStore()">MS</td>
+            <td onclick="appendToDisplay(1)">1</td>
+            <td onclick="appendToDisplay(2)">2</td>
+            <td onclick="appendToDisplay(3)">3</td>
+            <td onclick="operate('-')">-</td>
+            <td onclick="operate('1/x')">1/x</td>
+        </tr>
+        <tr>
+            <td onclick="memoryAdd()">M+</td>
+            <td onclick="appendToDisplay(0)">0</td>
+            <td onclick="toggleSign()">+/-</td>
+            <td onclick="appendDecimal()">.</td>
+            <td onclick="operate('+')">+</td>
+            <td onclick="calculateResult()">=</td>
+        </tr>
+    </table>
+
+    
+</body>
+</html>
+
